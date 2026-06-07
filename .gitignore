@@ -1,0 +1,8 @@
+# Never commit secrets
+**/.env
+
+# Never commit logs
+**/logs/
+
+# Never commit wp-content uploads
+**/wp-data/

@@ -21,5 +21,6 @@ RUN find /var/www/html -type d -exec chmod 755 {} \; \
 HEALTHCHECK --interval=30s --timeout=5s --start-period=30s --retries=3 \
     CMD php-fpm -t 2>&1 | grep -q "test is successful" || exit 1
 
-USER www-data
+# Do NOT set USER here — the WordPress entrypoint runs as root then drops to www-data
+# USER www-data
 EXPOSE 9000

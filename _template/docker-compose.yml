@@ -36,7 +36,7 @@ services:
     build:
       context: .                   # build context = _template/ dir (php/ lives here)
       dockerfile: Dockerfile
-    image: wp-hardened:6.7         # tag it once, reuse across all sites
+    image: wisnu/wp-hardened:6.7         # tag it once, reuse across all sites
     container_name: ${SITE_NAME}-php
     restart: unless-stopped
     volumes:
